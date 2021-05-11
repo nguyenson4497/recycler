@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_text_staggered_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="STAGGERED GRID"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_sGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_item"
+        app:layout_constraintTop_toBottomOf="@id/tv_text_staggered_grid" />
+
+    <Button
+        android:id="@+id/btn_add_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Item"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_text_viewType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_sGrid" />
+
+    <TextView
+        android:id="@+id/tv_text_viewType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="VIEW TYPE"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/rv_viewType"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_item" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_viewType"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_text_viewType" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
